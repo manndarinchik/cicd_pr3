@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - '5000:5000'
+    restart: always
+
+  redis:
+    container_name: redis
+    hostname: redis
+    image: redis:alpine
+    environment:
+      TZ: Europe/Moscow
